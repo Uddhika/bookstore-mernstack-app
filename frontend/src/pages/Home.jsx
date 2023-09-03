@@ -15,6 +15,7 @@ const Home = () => {
         axios.get('http://localhost:5555/books')
         .then((response) => {
             setBooks(response.data.data);
+            // console.log(response.data);
             setLoading(false);
         }
         ).catch((error) => {
@@ -27,7 +28,7 @@ const Home = () => {
   return (
     
     <div className='p-4'>
-        {console.log('return')}
+        {/* {console.log('return')} */}
         <div className='flex justify-between items-center'>
             <h1 className='text-3xl my-8'>Books List</h1>
             <Link to='/books/create'>
